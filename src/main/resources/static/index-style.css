@@ -1,0 +1,35 @@
+body {
+    background-color: #f1f1f1;
+    color: #000000;
+
+    font-size: 16px;
+    font-weight: normal;
+    font-family: "Noto Sans Georgian";
+}
+
+.h2 {
+    width: 100%;
+    padding: 10px;
+    background-color: #fff9dc;
+    border-radius: 25px;
+    margin-bottom: 10px;
+}
+
+.all-buttons {
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    background-color: #e5ffe7;
+}
+
+.button {
+    padding: 2px 2px 2px 2px;
+    font-size: 16px;
+    font-family: inherit;
+    cursor: pointer;
+    background-color: inherit;
+}
+
+.button:hover {
+    text-decoration: underline;
+}

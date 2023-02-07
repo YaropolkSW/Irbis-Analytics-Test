@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS news_table(
+    id SERIAL PRIMARY KEY,
+    source VARCHAR(50) NOT NULL,
+    subject VARCHAR(50) NOT NULL,
+    news VARCHAR(100) NOT NULL
+    );

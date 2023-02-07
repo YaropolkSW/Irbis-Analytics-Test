@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/index-style.css">
+    <title>News</title>
+</head>
+<body>
+<div class="container">
+    <div class="h2">
+        <h2>Выберите пункт</h2>
+    </div>
+    <div class="all-buttons">
+        <div class="button">
+            <a th:href="@{/sources}">
+                <input type="button" value="Источники">
+            </a>
+        </div>
+        <div class="button">
+            <a th:href="@{/subjects}">
+                <input type="button" value="Темы">
+            </a>
+        </div>
+        <div class="button">
+            <a th:href="@{/all-news}">
+                <input type="button" value="Все новости">
+            </a>
+        </div>
+        <div class="button">
+            <a th:href="@{/select-source}">
+                <input type="button" value="Все из источников">
+            </a>
+        </div>
+        <div class="button">
+            <a th:href="@{/select-subject}">
+                <input type="button" value="Все по тематикам">
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

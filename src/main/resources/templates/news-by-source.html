@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/news-style.css">
+    <title>News by source</title>
+</head>
+<body>
+<h2 class="h2">Новости по источнику</h2>
+<table class="table">
+    <th class="source">Источник</th>
+    <th class="subject">Тематика</th>
+    <th class="news">Новость</th>
+    <th:block th:each="page : ${newsPage.content}">
+        <tr>
+            <td th:text="${page.source}"></td>
+            <td th:text="${page.subject}"></td>
+            <td th:text="${page.news}"></td>
+        </tr>
+    </th:block>
+</table>
+
+<div th:if="${newsPage.totalPages > 0}" class="pagination">
+    <table>
+        <th:block th:each="pageNumber : ${pageNumbers}">
+            <tr>
+                <a th:href="@{/news-by-source(source=${source}, size=${newsPage.size}, page=${pageNumber})}"
+                   th:text="${pageNumber}">
+                </a>
+            </tr>
+        </th:block>
+    </table>
+</div>
+<br>
+
+<a th:href="@{/}">
+    <input type="button" value="Назад">
+</a>
+</body>
+</html>

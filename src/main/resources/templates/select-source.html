@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/select-source-or-subject-style.css">
+    <title>Chose source</title>
+</head>
+<body>
+<h2 class="h2">Какой источник Вас интересует?</h2>
+
+<form th:method="GET" th:action="@{/news-by-source}" th:object="${sources}" class="form">
+    <select th:name="source">
+        <option value="0">Выберите источник</option>
+        <option th:each="source : ${sources}" th:value="${source}" th:text="${source}"></option>
+    </select>
+    <input type="submit" value="Выбрать">
+</form>
+<br>
+
+<a th:href="@{/}" class="button">
+    <input type="button" value="Назад">
+</a>
+</body>
+</html>

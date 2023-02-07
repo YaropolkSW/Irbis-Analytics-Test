@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/sources-and-subjects-style.css">
+  <title>Subjects</title>
+</head>
+<body>
+<h2 class="h2">Все темы</h2>
+<table class="table">
+  <th:block th:each="subject : ${subjects}">
+    <tr>
+      <td th:text="${subject}"></td>
+    </tr>
+  </th:block>
+</table>
+<br>
+
+<a th:href="@{/}" class="button">
+  <input type="button" value="Назад">
+</a>
+</body>
+</html>
